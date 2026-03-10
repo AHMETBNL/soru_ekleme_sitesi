@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aileler Yarışıyor - Cevap Gönder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1>Aileler <span>Yarışıyor</span></h1>
+            <p id="system-status">Sisteme Bağlanılıyor...</p>
+        </header>
+
+        <section id="question-area" class="hidden">
+            <h2 id="active-question-display">Örnek Soru Yükleniyor...</h2>
+            
+            <form id="submission-form">
+                <div class="form-group">
+                    <label for="user-answer">Sizce Anketin En Popüler Cevabı Nedir?</label>
+                    <input type="text" id="user-answer" placeholder="Buraya yazın..." autocomplete="off" required>
+                </div>
+                
+                <button type="submit" id="btn-submit">
+                    <span>Yanıtı Gönder</span>
+                    <div class="loader" id="btn-loader"></div>
+                </button>
+            </form>
+        </section>
+        
+        <section id="wait-area">
+        </section>
+
+
+        <div id="toast" class="toast hidden">
+            <div class="toast-icon">✅</div>
+            <div class="toast-message">Yanıtınız kaydedildi!</div>
+        </div>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
